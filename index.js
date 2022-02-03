@@ -1,12 +1,14 @@
+const path = require("path");
 const express = require("express");
 const app = express();
+const publicDirPath = path.join(__dirname, "../public");
 
-app.use(
-  express.static(__dirname + "/public", { extensions: ["html"] }),
-  (_, res, next) => {
-    res.status(404);
-    res.sendFile(__dirname + "/public/404.html");
-  }
-);
+app.use(express.static(publicDirPath, { extensions: ["html"] }));
 
-app.listen(8080);
+app.use(function (req, res) {
+  res.status(404).sendFile(publicDirPath + "/404.html");
+});
+
+app.listen(8080, () => {
+  console.log("Server is up.");
+});
