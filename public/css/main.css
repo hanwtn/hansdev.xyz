@@ -1,0 +1,602 @@
+html {
+  --mountain-color: var(--nord-polarNight2);
+  background: var(--background);
+  transition: background 0.5s;
+  --moon-color: var(--nord-snowStorm2);
+  --sun-color: var(--nord-aurora1);
+}  
+html.dark {
+  --background: #000000;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+nav {
+  background-color: rgb(241, 241, 241);
+  border-radius: 20px;
+}
+html.dark nav {
+  background-color: rgb(43, 43, 43);
+  border-radius: 20px;
+}
+body nav ul li i {
+  margin-right: 3vw;
+  margin-left: 3vw;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+nav ul {
+text-align: center;
+padding: 0;
+transform: rotate(180deg);
+}
+nav li {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  display: inline-block;
+  transform: rotate(-180deg);
+}
+
+.nav-links {
+  position: relative;
+  display: block;
+  margin: 0px 0px 0px 0px;
+  list-style: none;
+}
+hr.dashed {
+  border-top: 1px dashed #bbb;
+  width: 70%;
+  top: 8vh;
+  position: relative;
+}
+.interests {
+  size: 10%;
+  width: 90%;
+  float: right;
+  top: 30vh;
+  position: relative;
+}
+footer {
+    float: right;
+    height: 15px;
+    bottom: 15px;
+    right: 25px;
+    position: absolute;
+    text-align: right;
+    padding: 10px 30px;
+    width: 80px;
+  }
+.top {
+  
+    float: left;
+    height: 20px;
+    top: 100px;
+    left: 0;
+    position: absolute;
+    text-align: right;
+    padding: 10px 30px;
+    width: 80px;
+  
+}
+
+.description {
+  position: relative;
+  top:20vh;
+  font-size: 500%;
+}
+
+:root {
+  --nord-polarNight0: #2e3440;
+  --nord-polarNight1: #3b4252;
+  --nord-polarNight2: #434c5e;
+  --nord-polarNight3: #3c4749;
+  --nord-snowStorm0: #d8dee9;
+  --nord-snowStorm1: #e5e9f0;
+  --nord-snowStorm2: #ffffff;/**/
+  --nord-snowStorm3: #f8f9fb;
+  --nord-frost0: #8fbcbb;
+  --nord-frost1: #88c0d0;
+  --nord-frost2: #81a1c1;
+  --nord-frost3: #5e81ac;
+  --nord-aurora0: #0004ff;
+  --nord-aurora1: #000000;/**/
+  --nord-aurora2: #ebcb8b;
+  --nord-aurora3: #a3be8c;
+  --nord-aurora4: #b48ead;
+}
+
+.ColorSwatch {
+  background: #eceff4;
+}
+.ColorSwatch body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 50px auto 0;
+}
+.ColorSwatch .Palette {
+  display: flex;
+  overflow: hidden;
+  height: 150px;
+  width: 500px;
+  box-shadow: 0px 4px 6px 0px rgba(24, 32, 66, 0.6);
+  border-radius: 1.25em;
+  transition: box-shadow 0.6s;
+  flex-direction: column;
+  margin: 50px;
+}
+.ColorSwatch .Palette:hover {
+  box-shadow: 0px 8px 12px 0px rgba(24, 32, 66, 0.6);
+}
+.ColorSwatch .Palette::before {
+  font-family: "Rubik", sans-serif;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  background: white;
+}
+.ColorSwatch .Palette-colors {
+  display: flex;
+  flex-grow: 2;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.ColorSwatch .Palette-color {
+  flex-grow: 2;
+  list-style-type: none;
+}
+.ColorSwatch .nord-polarNight::before {
+  content: "Polar Night";
+}
+.ColorSwatch .nord-polarNight .Palette-color:nth-child(1) {
+  background: var(--nord-polarNight0);
+}
+.ColorSwatch .nord-polarNight .Palette-color:nth-child(2) {
+  background: var(--nord-polarNight1);
+}
+.ColorSwatch .nord-polarNight .Palette-color:nth-child(3) {
+  background: var(--nord-polarNight2);
+}
+.ColorSwatch .nord-polarNight .Palette-color:nth-child(4) {
+  background: var(--nord-polarNight3);
+}
+.ColorSwatch .nord-snowStorm::before {
+  content: "Snow Storm";
+}
+.ColorSwatch .nord-snowStorm .Palette-color:nth-child(1) {
+  background: var(--nord-snowStorm0);
+}
+.ColorSwatch .nord-snowStorm .Palette-color:nth-child(2) {
+  background: var(--nord-snowStorm1);
+}
+.ColorSwatch .nord-snowStorm .Palette-color:nth-child(3) {
+  background: var(--nord-snowStorm2);
+}
+.ColorSwatch .nord-snowStorm .Palette-color:nth-child(4) {
+  background: var(--nord-snowStorm3);
+}
+.ColorSwatch .nord-frost::before {
+  content: "Frost";
+}
+.ColorSwatch .nord-frost .Palette-color:nth-child(1) {
+  background: var(--nord-frost0);
+}
+.ColorSwatch .nord-frost .Palette-color:nth-child(2) {
+  background: var(--nord-frost1);
+}
+.ColorSwatch .nord-frost .Palette-color:nth-child(3) {
+  background: var(--nord-frost2);
+}
+.ColorSwatch .nord-frost .Palette-color:nth-child(4) {
+  background: var(--nord-frost3);
+}
+.ColorSwatch .nord-aurora::before {
+  content: "Aurora";
+}
+.ColorSwatch .nord-aurora .Palette-color:nth-child(1) {
+  background: var(--nord-aurora0);
+}
+.ColorSwatch .nord-aurora .Palette-color:nth-child(2) {
+  background: var(--nord-aurora1);
+}
+.ColorSwatch .nord-aurora .Palette-color:nth-child(3) {
+  background: var(--nord-aurora2);
+}
+.ColorSwatch .nord-aurora .Palette-color:nth-child(4) {
+  background: var(--nord-aurora3);
+}
+.ColorSwatch .nord-aurora .Palette-color:nth-child(5) {
+  background: var(--nord-aurora4);
+}
+
+:root {
+  --moon-color: var(--nord-snowStorm2);
+  --sun-color: var(--nord-aurora1);
+  --mountain-color: var(--nord-polarNight3);
+}
+
+.DarkmodeIcon {
+  position: relative;
+  font-size: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  bottom: 60px;
+  left: 95%;
+  cursor: pointer;
+}
+.DarkmodeIcon-placeholder {
+  visibility: hidden;
+}
+
+.DarkmodeIcon-sun, .DarkmodeIcon-moon {
+  position: absolute;
+  font-size: 200%;
+  opacity: 0;
+  transition: left 0.3s, top 0.3s, opacity 0.3s;
+  z-index: 0;
+}
+.DarkmodeIcon-sun {
+  color: var(--sun-color);
+}
+html:not(.dark) .DarkmodeIcon-sun {
+  opacity: 1;
+  transition:  opacity 0.5s;
+}
+.DarkmodeIcon-moon {
+  color: var(--moon-color);
+}
+html.dark .DarkmodeIcon-moon {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+
+/*Styling Hamburger Icon*/
+.hamburger div {
+  width: 20px;
+  height: 3px;
+  background: #0084ff;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+html.dark .hamburger div {
+  background: #ffe600;
+
+}
+.interests-container {
+  position: relative;
+  top: 30vh;
+  left: 15vw;
+  width:80%;
+}
+.container {
+  float: left;
+  font-size: 200%;
+  height:10%;
+  margin-top: 13px;
+}
+.hamburger {
+  display: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.DarkmodeIcon-sun {
+  color: var(--sun-color);
+}
+html:not(.dark) .DarkmodeIcon-sun {
+  opacity: 1;
+  transition:  opacity 0.5s;
+}
+.DarkmodeIcon-moon {
+  color: var(--moon-color);
+}
+html.dark .DarkmodeIcon-moon {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+.myname {
+color: #0084ff;
+}
+html.dark .myname {
+color: #ffe600;
+}
+.nav-icons {
+  color: black;
+}
+.nav-icons:hover {
+  color: #0084ff;
+}
+html.dark .nav-icons {
+  color: #ffffff;
+}
+html.dark .nav-icons:hover {
+  color: #ffe600;
+}
+.sign {
+  font-family: 'Marck Script', cursive;
+  font-weight: bold;
+  text-align: left;
+  font-size: 100%;
+  color:#0084ff;
+  height: 30px;
+  display:block;
+  position:relative;
+}
+
+html.dark .sign {
+  font-family: 'Marck Script', cursive;
+  font-weight: bold;
+  text-align: left;
+  font-size: 100%;
+  color:#ffe600;
+  height: 30px;
+}
+
+.contact a {
+  color: black;
+}
+html.dark .contact a {
+  color: white;
+}
+
+
+
+.hidden {
+  opacity:0;
+}
+.console-container {
+  font-size:1.5rem; 
+  font-family: 'Shippori Antique B1', sans-serif;
+  text-align:center;
+  height:20%;
+  width:90%;
+  display:block;
+  position:relative;
+  color:rgb(0, 0, 0);
+  top:50px;
+  left:0px;
+  right:0;
+  margin:auto;
+}
+.console-underscore {
+   display:inline-block;
+  position:relative;
+  top:-0.14em;
+  left:10px;
+}
+
+html.dark .console-container {
+  color:white;
+}
+.contact {
+   font-size:1.5rem; 
+  font-family: 'Shippori Antique B1', sans-serif;
+  text-align:center;
+  height:20%;
+  width:90%;
+  display:block;
+  position:relative;
+  color:rgb(0, 0, 0);
+  top:50px;
+  left:0px;
+  right:0;
+  margin:auto;
+}
+html.dark .contact {
+  color:white;
+}
+.profile-img {
+  position: relative;
+  width: 10%;
+  height: auto;
+  border-radius: 10px;
+  top: 3vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*----------------Stying for small screens-----------------------------*/
+@media screen and (max-width: 800px) {
+  hr.dashed {
+  border-top: 1px dashed #bbb;
+  width: 70%;
+  top: 28vh;
+  position: relative;
+}
+
+.profile-img {
+  width: 25%;
+  height: auto;
+  border-radius: 10px;
+  top: 27vh;
+  margin: 0px 15px 15px 60px;
+}
+  footer {
+    float: right;
+    height: 1rem;
+    bottom: 1rem;
+    right: 0rem;
+    position: fixed;
+    text-align: right;
+    padding: 10px 30px;
+    width: 80px;
+  }
+.top {
+
+    float: left;
+    height: 20px;
+    top: 0;
+    right: 0;
+    position: fixed;
+    text-align: left;
+}
+body nav ul li i {
+  margin-right: 60px;
+  padding-bottom:30px;
+}
+
+  .sign {
+  text-align: right;
+  font-size: 100%;
+  color:#0084ff;
+  height: 30px;
+}
+
+html.dark .sign {
+  text-align: right;
+  font-size: 100%;
+  color:#ffe600;
+}
+
+.DarkmodeIcon {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  display: flex;
+  left: 40px;
+  bottom: 37px;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+  pointer-events: none;
+}
+.DarkmodeIcon.open {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  position: fixed;
+  font-size: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  display: flex;
+  left: 80px;
+  bottom: 37px;
+  opacity: 1;
+  pointer-events: inherit;
+}
+.DarkmodeIcon-placeholder {
+  visibility: hidden;
+}
+
+.DarkmodeIcon-sun, .DarkmodeIcon-moon {
+  position: absolute;
+  font-size: 120%;
+  opacity: 0;
+  transition: left 0.5s, top 0.5s, opacity 1s;
+  z-index: 0;
+}
+
+
+  nav {
+    position: fixed;
+    z-index: 3;
+    left: 5%;
+    top:85%;
+  }
+  nav ul {
+text-align: center;
+padding: 0;
+transform: rotate(360deg);
+}
+nav li {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  display: inline-block;
+  transform: rotate(-360deg);
+}
+body nav ul li i {
+  margin-right: 30px;
+  margin-left: 0px;
+  margin-top: 0px;
+  padding-bottom: 5vh;
+}
+  .hamburger {
+    display: block;
+    position: fixed;
+    cursor: pointer;
+    left: 4.5%;
+    bottom: 0;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+    transition: all 0.5s ease;
+  }
+  .nav-links {
+pointer-events: none;
+      position: absolute;
+  bottom:0;
+  left: 5%;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+    -webkit-font-smoothing: antialiased;
+    list-style: none;
+    display: flex;
+    margin: 0px;
+    transition: all 0.3s ease-out;
+  }
+  .nav-links.open {
+    pointer-events: auto;
+    -webkit-font-smoothing: antialiased;
+    list-style: none;
+    display: flex;
+    -webkit-writing-mode: vertical-ll;
+    -ms-writing-mode: tb-ll;
+    writing-mode: vertical-ll;
+
+}
+
+
+    .nav-links li{
+        opacity: 0;
+    }
+    .nav-links li:nth-child(7){
+        transition: all 0.5s ease 0.05s;
+    }
+    .nav-links li:nth-child(6){
+        transition: all 0.5s ease 0.1s;
+    }
+    .nav-links li:nth-child(5){
+        transition: all 0.5s ease 0.15s;
+    }
+    .nav-links li:nth-child(4){
+        transition: all 0.5s ease 0.2s;
+    }
+    .nav-links li:nth-child(3){
+        transition: all 0.5s ease 0.25s;
+    }
+    .nav-links li:nth-child(2){
+        transition: all 0.5s ease 0.3s;
+        margin: 0;
+    }
+    .nav-links li:nth-child(1){
+        transition: all 0.5s ease 0.35s;
+        margin: 0;
+    }
+    li.fade{
+        opacity: 1;
+    }
+
+.console-container {
+  text-align:left;
+  left:40px;
+  top: 27vh;
+}
+
+.description {
+  margin-left: 20px;
+  width:90%;
+  top:25vh;
+  position: relative;
+  font-size: 100%;
+}
+}
+/*-----Animating Hamburger Icon on Click----------------*/
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  transition: all 0.7s ease;
+  width: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}

@@ -1,0 +1,114 @@
+.interests {
+  font-size: 3rem; 
+  font-family: 'Caveat', cursive;
+  width:80%;
+  height: 500%;
+  position: relative;
+  top: 20vh;
+  left: -30px;
+  color: black;
+}
+
+html.dark .interests {
+  color: white;
+}
+.buttons {
+  color: black;
+}
+
+html.dark .buttons {
+  color: white;
+}
+.text-cursor::after {
+  content: '_';
+  opacity: 1;
+  animation: blinkTextCursor 1s infinite;
+}
+
+.text-cursor.typing::after {
+  animation: none;
+}
+
+@keyframes blinkTextCursor {
+  0%, 25%, 80%, 100% {
+    opacity: 1;
+  }
+  30%, 75% {
+    opacity: 0;
+  }
+}
+
+.buttons {
+  cursor:pointer;
+  position: fixed;
+  top: 85%;
+  left: 20%;
+  float: left;
+}
+
+.buttons i{
+  margin-left:3rem;
+  float: right;
+  font-size: 2rem;
+}
+
+.buttons i:hover{
+  margin-left:3rem;
+  float: right;
+  font-size: 3rem;
+  color:#0084ff;
+}
+html.dark .buttons i:hover{
+  color:#ffe600;
+}
+
+#link-icon {
+  font-size: 4rem;
+ color: black;
+ position: fixed;
+   top: 55%;
+  right: 50%;
+}
+
+html.dark #link-icon {
+ color: white;
+}
+
+#link-icon:hover {
+ color: #0084ff;
+}
+
+html.dark #link-icon:hover {
+ color: #ffe600;
+}
+
+
+@media screen and (max-width: 800px) {
+.buttons {
+  cursor:pointer;
+  position: fixed;
+  bottom: 8px;
+  height: 20px;
+  left: 2%;
+  width: 80%;
+  box-sizing: border-box;
+}
+#link-icon {
+ position: fixed;
+  left: 20%;
+  top: 37%;
+}
+.interests {
+  font-size: 1.5rem;
+  margin-left:2rem;
+}
+.buttons i{
+  font-size: 1rem;
+  margin-left:1.2rem;
+}
+
+.buttons i:hover{
+  font-size: 1.5rem;
+  margin-left:1.2rem;
+}
+}
