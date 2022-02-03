@@ -8,7 +8,7 @@ app.use(
   express.static(publicDirPath, { index: false, extensions: ["html"] })
 );
 
-app.use(function (req, res) {
+app.use(function (req, res, next) {
   res.status(404).sendFile(publicDirPath + "/404.html");
 });
 
