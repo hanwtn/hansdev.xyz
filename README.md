@@ -1,5 +1,5 @@
 # hansdev.xyz
-My stinky website
+My website
 
 Check out: https://hansdev.xyz
 
